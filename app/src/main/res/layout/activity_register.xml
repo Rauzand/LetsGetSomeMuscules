@@ -134,7 +134,7 @@
             </RelativeLayout>
 
             <Button
-                android:id="@+id/btnLoginLogin"
+                android:id="@+id/btnRegisterPageRegister"
                 style="@android:style/Widget.Button"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
