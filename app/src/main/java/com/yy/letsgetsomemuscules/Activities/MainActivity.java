@@ -1,8 +1,10 @@
-package com.yy.letsgetsomemuscules;
+package com.yy.letsgetsomemuscules.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.yy.letsgetsomemuscules.R;
 
 public class MainActivity extends AppCompatActivity {
 
