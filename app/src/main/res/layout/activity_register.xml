@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".Activities.LoginActivity">
+    tools:context=".Activities.RegisterActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -20,7 +19,7 @@
             <ImageView
                 android:id="@+id/imageViewLoginPageSomethinOne"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/top_login1" />
 
@@ -28,11 +27,44 @@
                 android:id="@+id/textViewLoginPageTxtLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:text="Register"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="40sp"
                 android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewRegisterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextRegisterPageName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/background_edit_text"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Enter your name"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textColorHint="#707070"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -51,7 +83,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/editTextLoginPageEmail"
+                    android:id="@+id/editTextRegisterPageEmail"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="8dp"
@@ -84,7 +116,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/editTextLoginPagePassword"
+                    android:id="@+id/editTextRegisterPagePassword"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="8dp"
@@ -99,45 +131,7 @@
                     android:textColorHint="#707070"
                     android:textSize="16sp" />
 
-                <ImageView
-                    android:id="@+id/imageView_show_hide_pwd"
-                    android:layout_width="33dp"
-                    android:layout_height="33dp"
-                    android:layout_alignTop="@+id/editTextLoginPagePassword"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="9dp"
-                    android:layout_marginEnd="22dp"
-                    android:layout_marginRight="22dp"
-                    android:layout_marginBottom="8dp"/>
-
             </RelativeLayout>
-
-            <TextView
-                android:id="@+id/textViewLoginDontHave"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
-                android:gravity="center_horizontal"
-                android:text="Don't have an account?"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textViewLoginSignUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
-                android:gravity="center_horizontal"
-                android:text="SignUp"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/btnLoginLogin"
@@ -150,7 +144,7 @@
                 android:backgroundTint="@color/yellow_base"
                 android:background="@drawable/btn_login"
                 android:gravity="center"
-                android:text="Login"
+                android:text="Register"
                 android:textSize="18dp"
                 android:textStyle="bold" />
 
@@ -164,7 +158,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
