@@ -1,4 +1,4 @@
-package com.yy.letsgetsomemuscules.Activities;
+package com.yy.letsgetsomemuscules.Activities.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, TimerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnCalcul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BMIActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,4 +1,4 @@
-package com.yy.letsgetsomemuscules.Activities;
+package com.yy.letsgetsomemuscules.Activities.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

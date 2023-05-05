@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/yellow_base"
-    tools:context=".Activities.StartPageActivity">
+    tools:context=".Activities.activity.StartPageActivity">
 
     <ImageView
         android:id="@+id/imgpage"
