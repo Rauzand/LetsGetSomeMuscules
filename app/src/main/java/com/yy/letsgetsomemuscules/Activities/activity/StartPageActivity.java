@@ -1,7 +1,6 @@
-package com.yy.letsgetsomemuscules.Activities;
+package com.yy.letsgetsomemuscules.Activities.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
