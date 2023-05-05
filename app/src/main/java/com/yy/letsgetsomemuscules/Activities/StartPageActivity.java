@@ -18,7 +18,7 @@ public class StartPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start_page);
 
         //Убрал штуку сверху
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         Button button = findViewById(R.id.btnexercise);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

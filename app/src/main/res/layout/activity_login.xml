@@ -17,14 +17,39 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageViewLoginPageSomethinOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/top_login1" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewLoginPageSomethinOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/top_login1" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome back"
+                    android:textColor="#000000"
+                    android:textSize="60dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/days_one"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewLoginPageSomethinOne"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewLoginPageSomethinOne"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
+                android:layout_marginTop="10dp"
                 android:id="@+id/textViewLoginPageTxtLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
