@@ -1,6 +1,8 @@
 package com.yy.letsgetsomemuscules.Activities.models;
 
-public class CategoryModel {
+import java.io.Serializable;
+
+public class CategoryModel implements Serializable {
 
     String url_img;
     String type;
