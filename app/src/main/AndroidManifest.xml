@@ -12,6 +12,9 @@
         android:theme="@style/Theme.LetsGetSomeMuscules"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.activity.ListTrainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.activity.ExerciseActivity"
             android:exported="false" />
         <activity
