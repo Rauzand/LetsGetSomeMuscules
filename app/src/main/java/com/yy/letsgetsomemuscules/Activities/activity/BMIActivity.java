@@ -2,6 +2,7 @@ package com.yy.letsgetsomemuscules.Activities.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class BMIActivity extends AppCompatActivity {
     EditText edW, edH;
     Button btnCalc;
     TextView resTxt;
-    Double h, w, resultCalc;
+    Float h, w, resultCalc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +27,21 @@ public class BMIActivity extends AppCompatActivity {
         btnCalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                h = Double.valueOf(String.valueOf(edH.getText())) / 100;
-                w = Double.valueOf(String.valueOf(edW.getText()));
+                h = Float.valueOf(String.valueOf(edH.getText())) / 100;
+                w = Float.valueOf(String.valueOf(edW.getText()));
                 resultCalc = w/(h*h);
                 resTxt.setText(String.valueOf(resultCalc));
+                if(resultCalc > 18 && resultCalc < 25){
+                    resTxt.setTextColor(getColor(R.color.goodweight));
+                }else if(resultCalc < 18 && resultCalc > 15){
+                    resTxt.setTextColor(getColor(R.color.yellow_base));
+                }else if(resultCalc < 15){
+                    resTxt.setTextColor(getColor(R.color.badweight));
+                }else if(resultCalc > 25 && resultCalc < 30){
+                    resTxt.setTextColor(getColor(R.color.yellow_base));
+                }else if(resultCalc > 30){
+                    resTxt.setTextColor(getColor(R.color.badweight));
+                }
             }
         });
     }

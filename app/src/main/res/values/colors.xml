@@ -10,4 +10,6 @@
     <color name="yellow_base">#FCDE13</color>
     <color name="colorPrimaryDark">#A16E00</color>
     <color name="colorAccent">#373737</color>
+    <color name="goodweight">#00FF00</color>
+    <color name="badweight">#FF0000</color>
 </resources>
