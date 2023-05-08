@@ -66,20 +66,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnWorkout"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="95dp"
             android:backgroundTint="@color/black"
             android:drawableBottom="@drawable/ic_userprofile"/>
-
-        <Button
-
-            android:id="@+id/button3"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnUserProfile"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="25dp"
-            android:backgroundTint="@color/black"/>
 
         <Button
             android:id="@+id/btnTimer"
@@ -97,23 +86,12 @@
             android:id="@+id/btnCalcul"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="95dp"
             android:layout_marginEnd="40dp"
             android:backgroundTint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnTimer"
             android:drawableBottom="@drawable/ic_calcul"/>
-
-        <Button
-
-            android:id="@+id/button6"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="40dp"
-            android:backgroundTint="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnCalcul" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
