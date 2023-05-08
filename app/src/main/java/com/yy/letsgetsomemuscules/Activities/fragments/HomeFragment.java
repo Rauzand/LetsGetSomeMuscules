@@ -1,20 +1,16 @@
-/*
 package com.yy.letsgetsomemuscules.Activities.fragments;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +18,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.yy.letsgetsomemuscules.Activities.adapters.CategoryAdapter;
+import com.yy.letsgetsomemuscules.Activities.models.CategoryModel;
 import com.yy.letsgetsomemuscules.R;
 
 import java.util.ArrayList;
@@ -31,11 +29,11 @@ public class HomeFragment extends Fragment {
 
     LinearLayout linearLayout;
     ProgressDialog progressDialog;
-    RecyclerView popularRecycleview;
+    RecyclerView categoryRecyclerView;
 
     //Popular product recycleview
-    PopularProductAdapter popularProductAdapter;
-    List<PopularProductModel> popularProductModelList;
+    CategoryAdapter categoryAdapter;
+    List<CategoryModel> categoryModelList;
 
     //FireStoreDB
     FirebaseFirestore db;
@@ -53,27 +51,28 @@ public class HomeFragment extends Fragment {
         db = FirebaseFirestore.getInstance();
 
         progressDialog = new ProgressDialog(getActivity());
-        popularRecycleview = root.findViewById(R.id.popular_rec);
+        categoryRecyclerView = root.findViewById(R.id.rec_cat);
+
 
 
         linearLayout = root.findViewById(R.id.home_layout);
         linearLayout.setVisibility(View.GONE);
 
 
-        progressDialog.setTitle("Welcome To EKawaii shop");
-        progressDialog.setMessage("Please wait");
+        progressDialog.setTitle("Загрузка тренировок");
+        progressDialog.setMessage("Подождите");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
 
         //Popular product
-        popularRecycleview.setLayoutManager(new GridLayoutManager(getActivity(),2));
-        popularProductModelList = new ArrayList<>();
-        popularProductAdapter = new PopularProductAdapter(getContext(), popularProductModelList);
-        popularRecycleview.setAdapter(popularProductAdapter);
+        categoryRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        categoryModelList = new ArrayList<>();
+        categoryAdapter = new CategoryAdapter(getContext(), categoryModelList);
+        categoryRecyclerView.setAdapter(categoryAdapter);
 
         //DB read data PopularProduct
-        db.collection("AllProducts")
+        db.collection("Category")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -81,9 +80,11 @@ public class HomeFragment extends Fragment {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
-                                PopularProductModel popularProductModel = document.toObject(PopularProductModel.class);
-                                popularProductModelList.add(popularProductModel);
-                                popularProductAdapter.notifyDataSetChanged();
+                                CategoryModel categoryModel = document.toObject(CategoryModel.class);
+                                categoryModelList.add(categoryModel);
+                                categoryAdapter.notifyDataSetChanged();
+                                linearLayout.setVisibility(View.VISIBLE);
+                                progressDialog.dismiss();
 
                             }
                         } else {
@@ -96,4 +97,3 @@ public class HomeFragment extends Fragment {
         return root;
     }
 }
-*/

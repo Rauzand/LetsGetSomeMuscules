@@ -2,23 +2,23 @@ package com.yy.letsgetsomemuscules.Activities.models;
 
 public class CategoryModel {
 
-    String img_url;
+    String url_img;
     String type;
 
     public CategoryModel() {
     }
 
-    public CategoryModel(String img_url, String type) {
-        this.img_url = img_url;
+    public CategoryModel(String url_img, String type) {
+        this.url_img = url_img;
         this.type = type;
     }
 
-    public String getImg_url() {
-        return img_url;
+    public String getUrl_img() {
+        return url_img;
     }
 
-    public void setImg_url(String img_url) {
-        this.img_url = img_url;
+    public void setUrl_img(String url_img) {
+        this.url_img = url_img;
     }
 
     public String getType() {

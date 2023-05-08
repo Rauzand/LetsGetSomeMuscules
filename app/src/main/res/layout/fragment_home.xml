@@ -11,40 +11,32 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="734dp"
             android:orientation="vertical">
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/popular_products"
+                    android:id="@+id/category_list"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="9dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/days_one"
-                    android:text="Choose needed function"
                     android:gravity="center"
+                    android:text="Какое направление тренировки"
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/popular_products"
-                    android:layout_marginLeft="9dp"
-                    android:text="Its time to start your path" />
+
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/popular_rec"
+                android:id="@+id/rec_cat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
